@@ -1,7 +1,16 @@
+
+:root{
+    --background-color: #eeebdd;
+    --calculator-color: #810000;
+    --button-color: #1b1717;
+    --text-color: #ce1212;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--background-color);
 }
 
 .title {
@@ -31,32 +40,56 @@ body {
     width: 500px;
     justify-content: center;
     align-items: center;
-    background-color: hotpink;
+    background-color: var(--calculator-color);
     gap: 30px;
+    border-radius: 10px;
 }
 
 .display {
-    text-align: right;
-    height: 100px;
-    width: 400px;
-    background-color: black;
-    color:white;
+    background-color: var(--button-color);
+    color:var(--background-color);
+    border-radius: 60px;
+}
+
+.display .equation,
+.display .input {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 350px;
+    margin: 0;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+.display .equation{
+    height: 33px;
+    font-size: 25px;
+
+}
+
+.display .input {
+    height: 66px;
+    font-size: 50px;
 }
 
 .btn-panel{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     gap: 30px;
 }
 
-.btn-panel .btn {
+.btn-panel button {
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: var(--button-color);
+    color: var(--text-color);
     font-size: xx-large;
     font-weight: bolder;
+    border-style: hidden;
+    border-radius: 10%;
 }
 
